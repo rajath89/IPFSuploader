@@ -1,0 +1,40 @@
+<!doctype html>
+<title>Image Uploader</title>
+<meta charset="utf-8" />
+
+<style>
+  body {
+    max-width: 800px;
+    margin: auto;
+    padding: 1em;
+    color: #fff;
+    font: 16px/1.6 menlo, monospace;
+    text-align:center;
+    background: #355C7D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  a {
+    color: #fff;
+  }
+
+input[type=file]{
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 4px;
+}
+</style>
+<h3>IPFS Uploader</h3>
+<p>IPFS is a distributed file system that seeks to connect all computing devices with the same system of files.</p>
+<!-- <p>The complete source for this IPFS Upload Service can be found at:
+<a href="https://github.com/avnigenc/ipfs.uploder">https://github.com/avnigenc/ipfs.uploder</a></p> -->
+<br><br><br>
+
+<form id="srPicUp" action="{{ url_for('uploadPic') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" multiple >
+    <input type="submit" value="upload">
+</form>
+
+<br><br>
+<!-- <h3>Uploaded Images (updated in real-time)</h3> -->
